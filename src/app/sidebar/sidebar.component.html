@@ -36,6 +36,11 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
+          
+          <li class="nav-item">
+            <button class="btn btn-primary btn-block"(click)="signOut()">Sign Out</button>
+          </li>
+          
           <li class="nav-item {{ moduleName == 'dashboard' ? 'menu-open' : '' }} {{ moduleName == 'dashboard2' ? 'menu-open' : '' }} {{ moduleName == 'dashboard3' ? 'menu-open' : '' }}">
             <a href="#" class="nav-link {{ moduleName == 'dashboard' ? 'active' : '' }} {{ moduleName == 'dashboard2' ? 'active' : '' }} {{ moduleName == 'dashboard3' ? 'active' : '' }}">
               <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -51,6 +56,12 @@
                   <p>Dashboard v1</p>
                 </a>
               </li>
+              <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon far fa-circle text-danger"></i>
+              <p class="text">Important</p>
+            </a>
+          </li>
               <li class="nav-item">
                 <a [routerLink] = "['/dashboard2']" routerLinkActive = "router-link-active" class="nav-link {{ moduleName == 'dashboard2' ? 'active' : '' }}">
                   <i class="far fa-circle nav-icon"></i>
@@ -676,6 +687,7 @@
               <p>Informational</p>
             </a>
           </li>
+         
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
