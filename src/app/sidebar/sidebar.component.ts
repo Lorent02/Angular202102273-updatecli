@@ -15,6 +15,10 @@ export class SidebarComponent  {
     sessionStorage.setItem("userId", "");
     this.router.navigate(["/login"])
   }
+  getItem(){
+    return sessionStorage.getItem("userId");
+  }
+  
 
 }
 

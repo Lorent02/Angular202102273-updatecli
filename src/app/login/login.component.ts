@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
+import { SidebarComponent } from '../sidebar/sidebar.component';
 
 declare const $ : any;
 
@@ -54,7 +55,7 @@ export class LoginComponent implements OnInit {
 
         console.log("session data berhasil dibuat");
 
-        this.router.navigate(["/dashboard"])
+        this.router.navigate(["/dashboard"] )
       });
   }
 }
